@@ -10,10 +10,10 @@ func main() {
 	r := gin.Default()
 	models.ConnectDatabase()
 
-	r.GET("/products", productcontroller.Index)
-	r.GET("/products/:id", productcontroller.Show)
-	r.POST("/products", productcontroller.Create)
-	r.PUT("/products/:id", productcontroller.Update)
-	r.DELETE("/products/:id", productcontroller.Delete)
+	r.GET("/api/products", productcontroller.Index)
+	r.GET("/api/products/:id", productcontroller.Show)
+	r.POST("/api/products", productcontroller.Create)
+	r.PUT("/api/products/:id", productcontroller.Update)
+	r.DELETE("/api/products/:id", productcontroller.Delete)
 	r.Run()
 }
