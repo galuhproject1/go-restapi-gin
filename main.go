@@ -11,9 +11,9 @@ func main() {
 	models.ConnectDatabase()
 
 	r.GET("/api/products", productcontroller.Index)
-	r.GET("/api/products/:id", productcontroller.Show)
-	r.POST("/api/products", productcontroller.Create)
-	r.PUT("/api/products/:id", productcontroller.Update)
-	r.DELETE("/api/products/:id", productcontroller.Delete)
+	r.GET("/api/product/:id", productcontroller.Show)
+	r.POST("/api/product", productcontroller.Create)
+	r.PUT("/api/product/:id", productcontroller.Update)
+	r.DELETE("/api/product", productcontroller.Delete)
 	r.Run()
 }
